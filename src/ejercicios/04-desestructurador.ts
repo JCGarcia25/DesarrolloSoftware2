@@ -66,28 +66,40 @@ const impuesto: number = 0.19;
 interface ImpuestosOptions {
     impuesto: number;
     productos: Producto[];
+    propina: number;
 }
 
 function calcularImpuesto(options: ImpuestosOptions): number[] {
     let total: number = 0;
-    options.productos.forEach(({ precio }) => {
+    const { impuesto, productos, propina } = options;
+    productos.forEach(({ precio }) => {
         total += precio
     })
 
-    return [total, total * options.impuesto];
+    return [total + propina, ((total * impuesto) + propina), propina];
 }
 
 const productos: ImpuestosOptions = {
     impuesto: 25,
-    productos: carrito
+    productos: carrito,
+    propina: 2000
 }
 
 const totalPagar1: number[] = calcularImpuesto( productos );
 const totalPagar2: number[] = calcularImpuesto({
     impuesto: 45,
-    productos: carrito
+    productos: carrito,
+    propina: 4000
 });
 
-console.log({totalPagar1, totalPagar2})
+//console.log({totalPagar1, totalPagar2})
+
+console.log("Total: " + totalPagar1[0])
+console.log("Total impuestos: " + totalPagar1[1])
+console.log("Propina: " + totalPagar1[2])
+
+console.log("Total: " + totalPagar2[0])
+console.log("Total impuestos: " + totalPagar2[1])
+console.log("Propina: " + totalPagar2[2])
 
 export {};
