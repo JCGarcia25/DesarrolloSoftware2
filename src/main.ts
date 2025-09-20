@@ -6,7 +6,8 @@ import './style.css'
 //import './ejercicios/04-desestructurador'
 //import './ejercicios/05-importaciones-exportaciones'
 //import './ejercicios/clase-02-01/constumer'
-import './ejercicios/06-clases'
+//import './ejercicios/06-clases'
+import './ejercicios/clase-02/constumer'
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 //app.innerHTML = 'Hola mundo';
