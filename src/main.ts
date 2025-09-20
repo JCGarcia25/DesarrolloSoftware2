@@ -8,7 +8,8 @@ import './style.css'
 //import './ejercicios/clase-02-01/constumer'
 //import './ejercicios/06-clases'
 //import './ejercicios/clase-02/constumer'
-import './ejercicios/07-genericos'
+//import './ejercicios/07-genericos'
+import './ejercicios/clase-02-ejercicio/generico'
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 //app.innerHTML = 'Hola mundo';
