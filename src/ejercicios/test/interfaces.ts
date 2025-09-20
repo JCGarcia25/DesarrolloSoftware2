@@ -7,5 +7,3 @@ export interface triangulo {
     base: number,
     altura: number
 }
-
-export {};
