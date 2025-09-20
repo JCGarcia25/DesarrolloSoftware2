@@ -45,7 +45,7 @@ console.log("Frutas: " + (frutas[3] || 'No se ha encontrado'));
 const [p1, p2, p3] = frutas;
 console.log(p1, p2, p3);
 
-interface Producto {
+export interface Producto {
     descripcion: string;
     precio: number;
 }
@@ -60,7 +60,7 @@ const computador: Producto = {
     precio: 5000000
 }
 
-const carrito: Producto[] = [celular, computador];
+export const carrito: Producto[] = [celular, computador];
 const impuesto: number = 0.19;
 
 interface ImpuestosOptions {
@@ -69,7 +69,7 @@ interface ImpuestosOptions {
     propina: number;
 }
 
-function calcularImpuesto(options: ImpuestosOptions): number[] {
+export function calcularImpuesto(options: ImpuestosOptions): number[] {
     let total: number = 0;
     const { impuesto, productos, propina } = options;
     productos.forEach(({ precio }) => {
