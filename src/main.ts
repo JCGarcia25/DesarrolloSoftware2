@@ -7,7 +7,8 @@ import './style.css'
 //import './ejercicios/05-importaciones-exportaciones'
 //import './ejercicios/clase-02-01/constumer'
 //import './ejercicios/06-clases'
-import './ejercicios/clase-02/constumer'
+//import './ejercicios/clase-02/constumer'
+import './ejercicios/07-genericos'
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 //app.innerHTML = 'Hola mundo';
